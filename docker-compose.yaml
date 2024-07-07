@@ -1,0 +1,25 @@
+services:
+  back:
+    build: ./back
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./back:/back
+    env_file:
+      - ./dotenv_files/.env
+    depends_on:
+      - psql
+
+  psql:
+    image: postgres:16-alpine
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data/
+    env_file:
+      - ./dotenv_files/.env
+
+#  front:
+#    build: ./front
+#    ports:
+#      - "3000:3000"
+#    volumes:
+#      - ./front:/front
