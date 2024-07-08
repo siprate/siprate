@@ -11,8 +11,8 @@ WORKDIR /back
 COPY requirements.txt /back/requirements.txt
 
 # Copie o diretório scripts e dê permissão ao arquivo commands.sh
-COPY scripts /scripts
-RUN chmod +x /scripts/commands.sh
+COPY scripts /back/scripts
+RUN chmod +x /back/scripts/commands.sh
 
 # Copie o restante dos arquivos do projeto
 COPY . .
@@ -24,10 +24,10 @@ RUN python -m venv /venv && \
   adduser --disabled-password --no-create-home duser
 
 # Defina o PATH
-ENV PATH="/scripts:/venv/bin:$PATH"
+ENV PATH="/back/scripts:/venv/bin:$PATH"
 
 # Mude o usuário para duser
 USER duser
 
 # Execute o script de comandos
-CMD ["/scripts/commands.sh"]
+CMD ["/back/scripts/commands.sh"]
