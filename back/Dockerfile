@@ -11,8 +11,12 @@ WORKDIR /back
 COPY requirements.txt /back/requirements.txt
 
 # Copie o diretório scripts e dê permissão ao arquivo commands.sh
-COPY scripts /back/scripts
+COPY scripts /back/scripts/
 RUN chmod +x /back/scripts/commands.sh
+
+# Verifique se o script foi copiado e as permissões estão corretas
+RUN ls -l /back/scripts
+RUN cat /back/scripts/commands.sh
 
 # Copie o restante dos arquivos do projeto
 COPY . .
