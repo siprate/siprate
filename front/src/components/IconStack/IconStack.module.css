@@ -1,0 +1,700 @@
+
+.iconStack {
+  position: relative;
+  width: 90px; /* Largura do maior elemento */
+  height: 90px; /* Altura do maior elemento */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rect {
+  position: absolute;
+  border-radius: 18px;
+}
+
+.rect1 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  animation: rect1Animation 1s linear forwards;
+  animation-delay: 2s;
+}
+
+.rect2 {
+  width: 75px;
+  height: 75px;
+  background-color: #BEBCC3;
+  top: -10px;
+  left: 7.5px;
+  transform-origin: top left;
+  animation: rect2ToIconAnimation 0.6s linear forwards;
+  animation-delay: 2s;
+}
+
+.rect3 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  opacity: 0;
+  animation: rect3Animation 0.3s linear forwards;
+  animation-delay: 2s;
+  z-index: -2;
+}
+
+.icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  animation: iconAnimation 1s linear forwards;
+  animation-delay: 2s;
+}
+
+@keyframes rect1Animation {
+  0% {
+    top: -20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #494D6F;
+  }
+  100% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+}
+
+@keyframes rect2ToIconAnimation {
+  0% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    background-image: url('/icons/ICON2.svg');
+    background-size: cover;
+  }
+}
+
+@keyframes rect3Animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes iconAnimation {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  30% {
+    top: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 60px;
+    opacity: 0;
+  }
+}
+
+
+.iconStack2 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconStack2 .rect1 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  animation: rect1Animation2 1s linear forwards;
+}
+
+.iconStack2 .rect2 {
+  width: 75px;
+  height: 75px;
+  background-color: #BEBCC3;
+  top: -10px;
+  left: 7.5px;
+  transform-origin: top left;
+  animation: rect2ToIconAnimation2 0.6s linear forwards;
+}
+
+.iconStack2 .rect3 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  opacity: 0;
+  animation: rect3Animation2 0.3s linear forwards;
+  z-index: -2;
+}
+
+.iconStack2 .icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  animation: iconAnimation2 1s linear forwards;
+}
+
+@keyframes rect1Animation2 {
+  0% {
+    top: -20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #494D6F;
+  }
+  100% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+}
+
+@keyframes rect2ToIconAnimation2 {
+  0% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    background-image: url('/icons/ICON3.svg');
+    background-size: cover;
+  }
+}
+
+@keyframes rect3Animation2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes iconAnimation2 {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  30% {
+    top: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 60px;
+    opacity: 0;
+  }
+}
+
+.iconStack3 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconStack3 .rect1 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  animation: rect1Animation3 1s linear forwards;
+}
+
+.iconStack3 .rect2 {
+  width: 75px;
+  height: 75px;
+  background-color: #BEBCC3;
+  top: -10px;
+  left: 7.5px;
+  transform-origin: top left;
+  animation: rect2ToIconAnimation3 0.6s linear forwards;
+}
+
+.iconStack3 .rect3 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  opacity: 0;
+  animation: rect3Animation3 0.3s linear forwards;
+  z-index: -2;
+}
+
+.iconStack3 .icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  animation: iconAnimation3 1s linear forwards;
+}
+
+@keyframes rect1Animation3 {
+  0% {
+    top: -20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #494D6F;
+  }
+  100% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+}
+
+@keyframes rect2ToIconAnimation3 {
+  0% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    background-image: url('/icons/ICON4.svg');
+    background-size: cover;
+  }
+}
+
+@keyframes rect3Animation3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes iconAnimation3 {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  30% {
+    top: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 60px;
+    opacity: 0;
+  }
+}
+
+/* Adicione novos estilos e animações para iconStack4 */
+.iconStack4 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconStack4 .rect1 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  animation: rect1Animation4 1s linear forwards;
+}
+
+.iconStack4 .rect2 {
+  width: 75px;
+  height: 75px;
+  background-color: #BEBCC3;
+  top: -10px;
+  left: 7.5px;
+  transform-origin: top left;
+  animation: rect2ToIconAnimation4 0.6s linear forwards;
+}
+
+.iconStack4 .rect3 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  opacity: 0;
+  animation: rect3Animation4 0.3s linear forwards;
+  z-index: -2;
+}
+
+.iconStack4 .icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  animation: iconAnimation4 1s linear forwards;
+}
+
+@keyframes rect1Animation4 {
+  0% {
+    top: -20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #494D6F;
+  }
+  100% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+}
+
+@keyframes rect2ToIconAnimation4 {
+  0% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    background-image: url('/icons/ICON5.svg');
+    background-size: cover;
+  }
+}
+
+@keyframes rect3Animation4 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes iconAnimation4 {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  30% {
+    top: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 60px;
+    opacity: 0;
+  }
+}
+
+
+/* Adicione novos estilos e animações para iconStack5 até iconStack11 */
+.iconStack5, .iconStack6, .iconStack7, .iconStack8, .iconStack9, .iconStack10, .iconStack11 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconStack5 .rect1, .iconStack6 .rect1, .iconStack7 .rect1, .iconStack8 .rect1, .iconStack9 .rect1, .iconStack10 .rect1, .iconStack11 .rect1 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  animation: rect1AnimationGeneric 1s linear forwards;
+}
+
+.iconStack5 .rect2, .iconStack6 .rect2, .iconStack7 .rect2, .iconStack8 .rect2, .iconStack9 .rect2, .iconStack10 .rect2, .iconStack11 .rect2 {
+  width: 75px;
+  height: 75px;
+  background-color: #BEBCC3;
+  top: -10px;
+  left: 7.5px;
+  transform-origin: top left;
+  animation: rect2ToIconAnimationGeneric 0.6s linear forwards;
+}
+
+.iconStack5 .rect3, .iconStack6 .rect3, .iconStack7 .rect3, .iconStack8 .rect3, .iconStack9 .rect3, .iconStack10 .rect3, .iconStack11 .rect3 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  opacity: 0;
+  animation: rect3AnimationGeneric 0.3s linear forwards;
+  z-index: -2;
+}
+
+.iconStack5 .icon, .iconStack6 .icon, .iconStack7 .icon, .iconStack8 .icon, .iconStack9 .icon, .iconStack10 .icon, .iconStack11 .icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  animation: iconAnimationGeneric 1s linear forwards;
+}
+
+@keyframes rect1AnimationGeneric {
+  0% {
+    top: -20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #494D6F;
+  }
+  100% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+}
+
+@keyframes rect2ToIconAnimationGeneric {
+  0% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+  }
+}
+
+@keyframes rect3AnimationGeneric {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes iconAnimationGeneric {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  30% {
+    top: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 60px;
+    opacity: 0;
+  }
+}
+
+/* Adicione novos estilos e animações para iconStack12 */
+.iconStack12 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconStack12 .rect1 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  animation: rect1Animation12 1s linear forwards;
+}
+
+.iconStack12 .rect2 {
+  width: 75px;
+  height: 75px;
+  background-color: #BEBCC3;
+  top: -10px;
+  left: 7.5px;
+  transform-origin: top left;
+  animation: rect2ToIconAnimation12 0.6s linear forwards;
+}
+
+.iconStack12 .rect3 {
+  width: 60px;
+  height: 60px;
+  background-color: #494D6F;
+  top: -20px;
+  left: 15px;
+  opacity: 0;
+  animation: rect3Animation12 0.3s linear forwards;
+  z-index: -2;
+}
+
+.iconStack12 .icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  animation: iconAnimation12 1s linear forwards;
+}
+
+@keyframes rect1Animation12 {
+  0% {
+    top: -20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #494D6F;
+  }
+  100% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+}
+
+@keyframes rect2ToIconAnimation12 {
+  0% {
+    top: -10px;
+    left: 7.5px;
+    width: 75px;
+    height: 75px;
+    background-color: #BEBCC3;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    background-image: url('/icons/ICON1.svg');
+    background-size: cover;
+  }
+}
+
+@keyframes rect3Animation12 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes iconAnimation12 {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  30% {
+    top: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 60px;
+    opacity: 0;
+  }
+}
+
+/* Estilos específicos para cada iconStack */
+.iconStack5 .rect2 { background-image: url('/icons/ICON6.svg'); background-size: cover; }
+.iconStack6 .rect2 { background-image: url('/icons/ICON7.svg'); background-size: cover; }
+.iconStack7 .rect2 { background-image: url('/icons/ICON8.svg'); background-size: cover; }
+.iconStack8 .rect2 { background-image: url('/icons/ICON9.svg'); background-size: cover; }
+.iconStack9 .rect2 { background-image: url('/icons/ICON10.svg'); background-size: cover; }
+.iconStack10 .rect2 { background-image: url('/icons/ICON11.svg'); background-size: cover; }
+.iconStack11 .rect2 { background-image: url('/icons/ICON12.svg'); background-size: cover; }
+.iconStack12 .rect2 { background-image: url('/icons/ICON1.svg'); background-size: cover; }
