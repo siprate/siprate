@@ -57,7 +57,17 @@ const Home = () => {
             {error && <p className={styles.error}>{error}</p>}
           </div>
         </section>
-        <h1>Home Page</h1>
+        <section className={styles.solutionsSection}>
+          <div className={styles.solutionsImage}></div>
+          <div className={styles.solutionsContent}>
+            <h2 className={styles.solutionsTitle}>Soluções modulares</h2>
+            <h3 className={styles.solutionsSubtitle}>Um pacote totalmente integrado de produtos para gestão da sua empresa</h3>
+            <p className={styles.solutionsParagraph}>
+              Reduza custos, aumente a receita e administre sua empresa com mais eficiência em uma plataforma totalmente integrada. 
+              Use a Siprate para gerenciar todas as suas necessidades e operações e ainda lançar – ou criar – novos modelos de negócios.
+            </p>
+          </div>
+        </section>
       </main>
     </div>
   );
