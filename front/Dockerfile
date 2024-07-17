@@ -16,6 +16,9 @@ COPY . .
 # Construa a aplicação
 RUN npm run build
 
+# Certifique-se de que a pasta .next foi criada
+RUN ls -la .next
+
 # Expõe a porta que a aplicação irá rodar
 EXPOSE 3000
 
