@@ -106,6 +106,9 @@ const Home = () => {
           <img src="/icons/ICON12.svg" alt="ICON12" className={`${styles.icon} ${styles.icon12}`} />
         </section>
 
+        <section className={styles.imageOverlay}>
+          <img src="/images/imageStore1.svg" alt="Store Overlay" className={styles.overlayImage} />
+        </section>
         <section className={styles.productSection}>
           <img src="/images/imageStore1.svg" alt="Store" className={styles.productImage} />
           <div className={styles.productContent}>
