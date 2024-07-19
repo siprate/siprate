@@ -71,13 +71,13 @@ const Header: React.FC = () => {
       <div className={styles.gradientLine}></div>
       <div className={styles.section2}>
         <div className={styles.links}>
-          <img src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} />
+          <a href="/"><img src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} /></a>
           <div className={styles.dropdown}>
             <a href="#" className={styles.link}>{t('apps')}
               <img src="/icons/downArrow.svg" alt="down arrow" />
             </a>
             <div className={styles.dropdownContent}>
-              <a href="#">{t('app1')}</a>
+              <a href="/salespar">{t('Salespar')}</a>
               <a href="#">{t('app2')}</a>
               <a href="#">{t('app3')}</a>
             </div>
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
           <a href="#" className={styles.link}>{t('support')}</a>
         </div>
         <div className={styles.rightSection}>
-          <TransparentButton title={t('startNow')} />
+          <TransparentButton title={t('startNow')} redirectTo='/signup'/>
           <Button title={t('contactSales')} showArrow={true} />          
         </div>
         <img src={menuOpen ? "/icons/close.svg" : "/icons/menu.svg"} alt="Menu" className={styles.menuIcon} onClick={toggleMenu} />
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
           </a>
           {appsDropdownOpen && (
             <div className={styles.dropdownContentMobile}>
-              <a href="#">{t('app1')}</a>
+              <a href="/salespar">{t('Salespar')}</a>
               <a href="#">{t('app2')}</a>
               <a href="#">{t('app3')}</a>
             </div>
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
           )}
           <a href="#" className={styles.mobileLink}>{t('support')}</a>
           <Button title={t('adminConsole')} showArrow={false} />
-          <TransparentButton title={t('startNow')} />
+          <TransparentButton title={t('startNow')} redirectTo='/signup' />
           <Button title={t('contactSales')} showArrow={true} />
           <div className={styles.languageSwitcher}>
             <div onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)} className={styles.languageButton}>

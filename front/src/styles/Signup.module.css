@@ -1,0 +1,176 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.leftSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 110px;
+  box-sizing: border-box;
+  padding-left: 10%;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.title {
+  font-size: 75px;
+  font-family: 'Inder', sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.text {
+  font-size: 30px;
+  font-family: 'Inder', sans-serif;
+  line-height: 1;
+  margin-bottom: auto;
+  width: 70%;
+}
+
+.footer {
+  font-size: 14px;
+  color: #4F4F4F;
+  margin-top: auto;
+}
+
+.rightSection {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 50% 50%, #000426, #000426, #0C1DB5, #000000);
+  background-size: 200% 200%;
+  animation: gradientAnimation 30s linear infinite;
+  position: relative;
+  word-break: break-word;
+  margin: 0 auto;
+  border-radius: 30px 0 0 30px;
+  overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.heroSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.symbolImage {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-75%);
+  width: 90%;
+  height: auto;
+}
+
+.glassEffect {
+  position: absolute;
+  width: 550px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 40px;
+}
+
+.signupTitle {
+  font-size: 50px;
+  font-family: 'Inder', sans-serif;
+  color: white;
+  margin-bottom: 10px;
+  margin: 0;
+}
+
+.agreementText {
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin-top: 0px;
+}
+
+.dividerContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.divider {
+  flex: 1;
+  height: 1px;
+  background-color: white;
+  margin: 0 10px;
+}
+
+.orText {
+  font-size: 14px;
+  color: white;
+}
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  background-color: white;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.socialButton:hover {
+  background-color: #dbdbdb;
+}
+
+.socialIcon {
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+}

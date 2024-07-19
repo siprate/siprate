@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 import styles from '../styles/Home.module.css';
 import Header from '../components/Header/Header';
 import IconStack from '../components/IconStack/IconStack';
@@ -7,9 +8,46 @@ import Button from '../components/Button/Button';
 import TransparentButton from '../components/TransparentButton/TransparentButton';
 import Footer from '../components/Footer/Footer';
 
+const carouselData = [
+  {
+    overlayImage: "/images/imageStore1.svg",
+    salesparImage: "/images/ComponentSalespar.svg",
+    icon: "/icons/ICON7.svg",
+    title: "Salespar",
+    productImage: "/images/imageStore1.svg",
+    productTitle: "productStartTitle",
+    productDescription: "productDescription",
+    productDescription2: "productDescription2",
+    button1: { title: "initiateNowButton", component: TransparentButton },
+    button2: { title: "learnMoreButton", component: Button, showArrow: true }
+  },
+  {
+    overlayImage: "/images/imagePhoto.svg",
+    salesparImage: "/images/ComponentSalespar.svg",
+    icon: "/icons/ICON1.svg",
+    title: "New Product",
+    productImage: "/images/imagePhoto.svg",
+    productTitle: "Outra produto incrível para sua empresa",
+    productDescription: "productDescription",
+    productDescription2: "productDescription2",
+    button1: { title: "initiateNowButton", component: TransparentButton },
+    button2: { title: "learnMoreButton", component: Button, showArrow: true }
+  }
+  // Adicione mais itens conforme necessário
+];
+
 const Home = () => {
+  const { t } = useTranslation('common');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselData.length);
+    }, 5000); // Troca a cada 5 segundos
+    return () => clearInterval(interval);
+  }, []);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -18,7 +56,7 @@ const Home = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateEmail(email)) {
-      setError('Por favor, insira um e-mail válido.');
+      setError(t('emailInvalidMessage'));
     } else {
       setError('');
       // Lógica para enviar o e-mail
@@ -31,11 +69,13 @@ const Home = () => {
     return re.test(email);
   };
 
+  const currentData = carouselData[currentSlide];
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Home Page</title>
-        <meta name="description" content="Home page description" />
+        <title>{t('homePageTitle')}</title>
+        <meta name="description" content={t('homePageDescription')} />
       </Head>
       <Header />
       <main className={styles.main}>
@@ -44,17 +84,17 @@ const Home = () => {
           <img src="/images/minorSymbol.svg" alt="Simbo Menor" className={styles.simboMenor} />
           <div className={styles.heroContent}>
             <IconStack />
-            <h1 className={styles.heroTitle}>O seu negócio inteiro em uma plataforma.</h1>
-            <h2 className={styles.heroSubtitle}>Simples, prático e tecnológico</h2>
+            <h1 className={styles.heroTitle}>{t('heroTitle')}</h1>
+            <h2 className={styles.heroSubtitle}>{t('heroSubtitle')}</h2>
             <form className={styles.emailForm} onSubmit={handleSubmit}>
               <input
                 type="email"
-                placeholder="Seu e-mail de trabalho"
+                placeholder={t('workEmailPlaceholder')}
                 className={styles.emailInput}
                 value={email}
                 onChange={handleEmailChange}
               />
-              <Button title="Começar Agora" fullWidth />
+              <Button title={t('startNowButton')} fullWidth />
             </form>
             {error && <p className={styles.error}>{error}</p>}
           </div>
@@ -73,25 +113,23 @@ const Home = () => {
             </div>
           </div>
           <div className={styles.solutionsContent}>
-            <h2 className={styles.solutionsTitle}>Soluções modulares</h2>
-            <h3 className={styles.solutionsSubtitle}>Um pacote totalmente integrado de produtos para gestão da sua empresa</h3>
+            <h2 className={styles.solutionsTitle}>{t('solutionsTitle')}</h2>
+            <h3 className={styles.solutionsSubtitle}>{t('solutionsSubtitle')}</h3>
             <p className={styles.solutionsParagraph}>
-              Reduza custos, aumente a receita e administre sua empresa com mais eficiência em uma plataforma totalmente integrada. 
-              Use a Siprate para gerenciar todas as suas necessidades e operações e ainda lançar – ou criar – novos modelos de negócios.
+              {t('solutionsDescription')}
             </p>
           </div>
         </section>
 
         <section className={styles.iconSection}>
-        <div className={styles.iconContent}>
-          <h2 className={styles.text1}>Leve o seu trabalho a outro patamar</h2>
-          <h1 className={styles.text2}>Imagine uma biblioteca</h1>
-          <h1 className={styles.text2}>inteira de aplicativos</h1>
-          <h1 className={styles.text2}>empresariais ao seu dispor.</h1>
-          <div className={styles.iconButton}>
-            <Button title="Ver todos os apps" showArrow={true} />
-          </div> 
-        </div>
+          <div className={styles.iconContent}>
+            <h2 className={styles.text1}>{t('workUpgrade')}</h2>
+            <h1 className={styles.text2}>{t('imagineLibrary')}</h1>
+            <h1 className={styles.text2}>{t('entireBusinessApps')}</h1>
+            <div className={styles.iconButton}>
+              <Button title={t('viewAllApps')} showArrow={true} />
+            </div> 
+          </div>
           <img src="/icons/ICON1.svg" alt="ICON1" className={`${styles.icon} ${styles.icon1}`} />
           <img src="/icons/ICON2.svg" alt="ICON2" className={`${styles.icon} ${styles.icon2}`} />
           <img src="/icons/ICON3.svg" alt="ICON3" className={`${styles.icon} ${styles.icon3}`} />
@@ -107,27 +145,26 @@ const Home = () => {
         </section>
 
         <section className={styles.imageOverlay}>
-          <h1 className={styles.salesparTitle}>Salespar</h1>
-          <img src="/images/imageStore1.svg" alt="Store Overlay" className={styles.overlayImage} />
-          <img src="/images/ComponentSalespar.svg" alt="Component Salespar" className={styles.salesparImage} />
+          <div className={styles.salesparTitleContainer}>
+            <img src={currentData.icon} alt="ICON" className={styles.salesparIcon} />
+            <h1 className={styles.salesparTitle}>{t(currentData.title)}</h1>
+          </div>
+          <img src={currentData.overlayImage} alt="Store Overlay" className={styles.overlayImage} />
+          <img src={currentData.salesparImage} alt="Component Salespar" className={styles.salesparImage} />
         </section>
 
         <section className={styles.productSection}>
-          <img src="/images/imageStore1.svg" alt="Store" className={styles.productImage} />
+          <img src={currentData.productImage} alt="Store" className={styles.productImage} />
           <div className={styles.productContent}>
-            <h1 className={styles.productTitle}>Tudo começa com um produto e um sonho</h1>
-            <p className={styles.productDescription}>
-              Simplifique a gestão do seu negócio com nosso app de vendas e emissão de notas fiscais! Ideal para pequenas e médias empresas, ele permite cadastrar produtos, gerenciar clientes, controlar estoques e emitir NF-e e NFS-e de forma rápida e segura.
-              <br /><br />
-              Com relatórios detalhados, integração com meios de pagamento e acesso móvel, você terá tudo o que precisa na palma da mão. Maximize a eficiência e a lucratividade do seu negócio com nossa solução completa e intuitiva. Baixe agora e transforme sua gestão!
-            </p>
+            <h1 className={styles.productTitle}>{t(currentData.productTitle)}</h1>
+            <p className={styles.productDescription}>{t(currentData.productDescription)}</p>
+            <p className={styles.productDescription2}>{t(currentData.productDescription2)}</p>
             <div className={styles.buttonGroup}>
-              <TransparentButton title="Iniciar Agora" />
-              <Button title="Saiba mais sobre a Salespar" showArrow={true} />
+              {React.createElement(currentData.button1.component, { title: t(currentData.button1.title) })}
+              {React.createElement(currentData.button2.component, { title: t(currentData.button2.title), showArrow: currentData.button2.showArrow })}
             </div>
           </div>
         </section>
-        
       </main>
       <Footer />
     </div>
