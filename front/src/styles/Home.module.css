@@ -237,7 +237,7 @@
 }
 
 .solutionsSubtitle {
-  font-size: 60px;
+  font-size: 54px;
   font-family: 'Roboto', sans-serif;
   margin: 10px 0;
   line-height: 1;
@@ -245,7 +245,7 @@
 }
 
 .solutionsParagraph {
-  font-size: 25px;
+  font-size: 22px;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 300;
@@ -294,14 +294,14 @@
 }
 
 .text1 {
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin-top: 20px;
 }
 
 .text2 {
-  font-size: 60px;
+  font-size: 54px;
   font-family: 'Roboto', sans-serif;
   margin: 10px 0;
   line-height: 1;
@@ -395,6 +395,24 @@
   border-radius: 30px;
 }
 
+.salesparImage {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: -100%;
+}
+
+.salesparTitle {
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  font-size: 40px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
 /* productSection */
 .productSection {
   max-width: 1590px;
@@ -436,18 +454,19 @@
 }
 
 .productTitle {
-  font-size: 60px;
+  font-size: 54px;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 20px;
   line-height: 1;
 }
 
 .productDescription {
-  font-size: 25px;
+  font-size: 22px;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 300;
   line-height: 1;
+  margin-bottom: 40px;
 }
 
 .buttonGroup {
@@ -590,26 +609,29 @@
   .icon5 { top: 0%; left: 80%; }
   .icon6 { top: 28%; left: 75%; }
   .icon7 { top: 79%; left: 60%; }
-  .icon8 { top: 75%; left: 10%; }
-  .icon9 { top: 80%; left: 35%; }
-  .icon10 { top: 90%; left: 15%; }
-  .icon11 { top: 85%; left: 85%; }
-  .icon12 { top: 68%; left: 50%; }
+  .icon8 { top: 70%; left: 10%; }
+  .icon9 { top: 85%; left: 29%; }
+  .icon10 { top: 100%; left: 15%; }
+  .icon11 { top: 95%; left: 71%; }
+  .icon12 { top: 65%; left: 70%; }
 
   /* imageOverlay */
 .imageOverlay {
   width: 370px;
   height: 302px;
-  margin-bottom: -390px;
   z-index: 2; 
-  margin-top: 40px;
-  margin-left: 30px;
+  top: 150px;
+  margin: 25px;
 }
 
+.salesparTitle {
+  font-size: 30px;
+}
   /* productSection */
 .productSection {
   height: 800px;
-  margin-top: 60px;
+  top: -150px;
+  margin-bottom: -110px;
 }
 
 .productImage {
@@ -626,7 +648,7 @@
   justify-content: center;
   margin-left: 2%; 
   padding-right: 0px;
-  margin-top: 75%;
+  margin-top: 300px;
 }
 
 .productTitle {

@@ -5,7 +5,7 @@ import Header from '../components/Header/Header';
 import IconStack from '../components/IconStack/IconStack';
 import Button from '../components/Button/Button';
 import TransparentButton from '../components/TransparentButton/TransparentButton';
-
+import Footer from '../components/Footer/Footer';
 
 const Home = () => {
   const [email, setEmail] = useState('');
@@ -107,8 +107,11 @@ const Home = () => {
         </section>
 
         <section className={styles.imageOverlay}>
+          <h1 className={styles.salesparTitle}>Salespar</h1>
           <img src="/images/imageStore1.svg" alt="Store Overlay" className={styles.overlayImage} />
+          <img src="/images/ComponentSalespar.svg" alt="Component Salespar" className={styles.salesparImage} />
         </section>
+
         <section className={styles.productSection}>
           <img src="/images/imageStore1.svg" alt="Store" className={styles.productImage} />
           <div className={styles.productContent}>
@@ -126,6 +129,7 @@ const Home = () => {
         </section>
         
       </main>
+      <Footer />
     </div>
   );
 };

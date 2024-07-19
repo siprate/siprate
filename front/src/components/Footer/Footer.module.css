@@ -1,0 +1,159 @@
+.footer {
+    color: white;
+    max-width: 1590px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 54px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+  
+  .emailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 18px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 25px;
+    margin-bottom:40px;
+  }
+  
+  .emailInput {
+    border: none;
+    padding: 20px;
+    font-size: 25px;
+    flex-grow: 1;
+    background-color: transparent;
+    color: white;
+    width: 350%;
+    outline: none;
+  }  
+
+  .emailInput::placeholder {
+    color: white;
+    background-color: transparent;
+  }
+  
+  .divider {
+    border-bottom: 2px solid white;
+    margin: 20px 0;
+  }
+  
+  .linksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+  }
+  
+  .column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #4F4F4F;
+    font-weight: 500;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .column ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1590px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .bottomContainer p {
+    color: #4F4F4F;
+  }
+  
+  .bottomLinks {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .bottomLinks a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .bottomLinks a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media queries */
+  @media (max-width: 1024px) {
+
+    .title {
+        font-size: 31px;
+        text-align: center;
+    }
+    
+    .emailContainer {
+        display: block;
+        margin: 25px;
+        margin-bottom: 40px;
+    }
+
+    .emailInput {
+        padding: 2px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .divider {        
+        margin: 25px;
+    }
+
+    .linksContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-left: 25px;
+    }
+  
+    .column {
+      flex: 1 1 50%; /* 2 colunas no mobile */
+    }
+
+    .bottomContainer{
+        margin: 25px;
+        margin-bottom: 45px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .column {
+      flex: 1 1 22%; /* 4 colunas no desktop */
+    }
+  }
+  
