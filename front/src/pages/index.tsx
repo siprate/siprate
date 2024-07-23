@@ -126,6 +126,7 @@ const Home = () => {
             <h2 className={styles.text1}>{t('workUpgrade')}</h2>
             <h1 className={styles.text2}>{t('imagineLibrary')}</h1>
             <h1 className={styles.text2}>{t('entireBusinessApps')}</h1>
+            <h1 className={styles.text2}>{t('entireBusinessApps1')}</h1>
             <div className={styles.iconButton}>
               <Button title={t('viewAllApps')} showArrow={true} />
             </div> 

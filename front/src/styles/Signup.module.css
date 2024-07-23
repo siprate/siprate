@@ -1,3 +1,4 @@
+/* Estilos gerais */
 .container {
   display: flex;
   min-height: 100vh;
@@ -20,7 +21,7 @@
 }
 
 .logo {
-  max-width: 200px;
+  width: 168.59px;
 }
 
 .title {
@@ -94,7 +95,7 @@
 
 .glassEffect {
   position: absolute;
-  width: 550px;
+  width: 510px;
   height: auto;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
@@ -119,9 +120,10 @@
 }
 
 .agreementText {
-  font-size: 19px;
+  font-size: 15px;
   font-family: 'Roboto', sans-serif;
   color: white;
+  font-weight: 300;
   margin-top: 0px;
 }
 
@@ -155,12 +157,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65px;
+  height: 60px;
   background-color: white;
   color: #000;
   border: none;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -170,7 +172,120 @@
 }
 
 .socialIcon {
-  margin-right: 10px;
-  width: 36px;
-  height: 36px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.flexRow {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.DownSection {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .leftSection {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .title, .footer, .text {
+    display: none;
+  }
+
+  .rightSection {
+    width: 100%;
+    height: 70vh;
+    border-radius: 0;
+    justify-content: center;
+  }
+
+  .glassEffect {
+    position: relative;
+    width: 90%;
+    max-width: 510px;
+    padding: 20px;
+  }
+
+  .signupTitle {
+    font-size: 36px;
+  }
+
+  .agreementText {
+    font-size: 14px;
+  }
+
+  .socialButton {
+    font-size: 18px;
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .heroSection {
+    display: none;
+  }
+
+  .DownSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .title2 {
+    font-size: 35px;
+    font-family: 'Inder', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  
+  .text2 {
+    font-size: 20px;
+    font-family: 'Inder', sans-serif;
+    line-height: 1;
+    margin-bottom: 40px;
+    width: 75%;
+  }
+  
+  .footer2 {
+    font-size: 14px;
+    color: #4F4F4F;
+    margin-top: auto;
+    margin-bottom: 40px;
+  }
+
+  .flexRow {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
 }

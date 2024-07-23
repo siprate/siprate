@@ -6,15 +6,16 @@ type CustomInputProps = {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
+  type?: string; // Adicione a prop type
 };
 
-const CustomInput: React.FC<CustomInputProps> = ({ name, value, onChange, placeholder }) => {
+const CustomInput: React.FC<CustomInputProps> = ({ name, value, onChange, placeholder, type = 'text' }) => {
   return (
     <div className={styles.inputContainer}>
       <label htmlFor={name} className={styles.label}>{name}</label>
       <input
         id={name}
-        type="text"
+        type={type}
         name={name}
         value={value}
         onChange={onChange}
