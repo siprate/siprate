@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router'; 
 import styles from './Header.module.css';
 import Button from '../Button/Button';
 import TransparentButton from '../TransparentButton/TransparentButton';
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation('common');
+  const router = useRouter();
   const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [appsDropdownOpen, setAppsDropdownOpen] = useState(false);
@@ -44,6 +46,10 @@ const Header: React.FC = () => {
     };
   }, [menuOpen]);
 
+  const handleContinue = () => {
+    router.push('/login'); 
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.section1}>
@@ -53,7 +59,7 @@ const Header: React.FC = () => {
           <img src="/icons/arrow.svg" alt="arrow" className={styles.icon} />
         </div>
         <div className={styles.rightSection}>
-          <Button title={t('adminConsole')} showArrow={false} />
+          <Button title={t('adminConsole')} showArrow={false} onClick={handleContinue}/>
           <div className={styles.languageSwitcher}>
             <div onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)} className={styles.languageButton}>
               <img src="/icons/globe.svg" alt="globe" />
@@ -82,7 +88,7 @@ const Header: React.FC = () => {
               <a href="#">{t('app3')}</a>
             </div>
           </div>
-          <a href="#" className={styles.link}>{t('pricing')}</a>
+          <a href="/pricing" className={styles.link}>{t('pricing')}</a>
           <div className={styles.dropdown}>
             <a href="#" className={styles.link}>{t('community')}
               <img src="/icons/downArrow.svg" alt="down arrow" />
@@ -125,7 +131,7 @@ const Header: React.FC = () => {
             </div>
           )}
           <a href="#" className={styles.mobileLink}>{t('support')}</a>
-          <Button title={t('adminConsole')} showArrow={false} />
+          <Button title={t('adminConsole')} showArrow={false} onClick={handleContinue} />
           <TransparentButton title={t('startNow')} redirectTo='/signup' />
           <Button title={t('contactSales')} showArrow={true} />
           <div className={styles.languageSwitcher}>

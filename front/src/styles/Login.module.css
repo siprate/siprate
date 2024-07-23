@@ -1,0 +1,199 @@
+/* Estilos gerais */
+.container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .main {
+    display: flex;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 168.59px;
+    margin-top: 70%; 
+  }
+  
+  .rightSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, #000426, #000426, #0C1DB5, #000000);
+    background-size: 200% 200%;
+    animation: gradientAnimation 30s linear infinite;
+    position: relative;
+    word-break: break-word;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .heroSection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .symbolImage {
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-120%);
+    width: 50%;
+    height: auto;
+  }
+  
+  .glassEffect {
+    position: absolute;
+    width: 510px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 40px;
+  }
+  
+  .loginTitle {
+    font-size: 40px;
+    font-family: 'Inder', sans-serif;
+    color: white;
+    margin: 0;
+  }
+  
+  .agreementText {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  
+  .agreementText2 {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;
+    margin-top: 0px;
+  }
+  
+  .dividerContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .divider {
+    flex: 1;
+    height: 1px;
+    background-color: white;
+    margin: 0 10px;
+  }
+  
+  .orText {
+    font-size: 14px;
+    color: white;
+  }
+  
+  .socialButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .socialButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: white;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .socialButton:hover {
+    background-color: #dbdbdb;
+  }
+  
+  .socialIcon {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .main {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .rightSection {
+      width: 100%;
+      height: 100vh;
+      border-radius: 0;
+      justify-content: center;
+    }
+
+    .logo {
+        margin-bottom: 30px; 
+      }
+  
+    .glassEffect {
+      position: relative;
+      width: 90%;
+      max-width: 510px;
+      padding: 20px;
+    }
+  
+    .loginTitle {
+      font-size: 36px;
+    }
+  
+    .agreementText {
+      font-size: 14px;
+    }
+  
+    .socialButton {
+      font-size: 18px;
+    }
+  
+    .heroSection {
+      display: none;
+    }
+  }
+  
