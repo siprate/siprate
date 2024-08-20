@@ -12,3 +12,12 @@ class Software(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Faq(models.Model):
+    id = models.AutoField(primary_key=True)
+    pergunta = models.TextField(default='')
+    resposta = models.TextField(default='')
+
+    def __str__(self):
+        return self.pergunta
