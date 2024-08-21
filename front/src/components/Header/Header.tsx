@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useRouter } from 'next/router'; 
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Header.module.css';
 import Button from '../Button/Button';
 import TransparentButton from '../TransparentButton/TransparentButton';
@@ -47,22 +49,28 @@ const Header: React.FC = () => {
   }, [menuOpen]);
 
   const handleContinue = () => {
-    router.push('/login'); 
+    router.push('/login');
   };
 
   return (
     <header className={styles.header}>
       <div className={styles.section1}>
         <div className={styles.leftSection}>
-          <p className={styles.text}><a href="#" className={styles.linkText}>{t('discover')}</a></p>
-          <a href="#" className={styles.link}>{t('requestDemo')}</a>
-          <img src="/icons/arrow.svg" alt="arrow" className={styles.icon} />
+          <p className={styles.text}>
+            <Link href="#" className={styles.linkText}>
+              {t('discover')}
+            </Link>
+          </p>
+          <Link href="#" className={styles.link}>
+            {t('requestDemo')}
+          </Link>
+          <Image src="/icons/arrow.svg" alt="arrow" className={styles.icon} width={16} height={16} />
         </div>
         <div className={styles.rightSection}>
-          <Button title={t('adminConsole')} showArrow={false} onClick={handleContinue}/>
+          <Button title={t('adminConsole')} showArrow={false} onClick={handleContinue} />
           <div className={styles.languageSwitcher}>
             <div onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)} className={styles.languageButton}>
-              <img src="/icons/globe.svg" alt="globe" />
+              <Image src="/icons/globe.svg" alt="globe" width={16} height={16} />
               <span>{i18n.language === 'pt' ? t('portuguese') : t('english')}</span>
             </div>
             {languageDropdownOpen && (
@@ -77,51 +85,72 @@ const Header: React.FC = () => {
       <div className={styles.gradientLine}></div>
       <div className={styles.section2}>
         <div className={styles.links}>
-          <a href="/"><img src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} /></a>
+          <Link href="/">
+            <Image src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} width={100} height={50} />
+          </Link>
           <div className={styles.dropdown}>
-            <a href="#" className={styles.link}>{t('apps')}
-              <img src="/icons/downArrow.svg" alt="down arrow" />
-            </a>
+            <Link href="#" className={styles.link}>
+              {t('apps')}
+              <Image src="/icons/downArrow.svg" alt="down arrow" width={16} height={16} />
+            </Link>
             <div className={styles.dropdownContent}>
-              <a href="/salespar">{t('Salespar')}</a>
+              <Link href="/salespar">
+                {t('Salespar')}
+              </Link>
               <a href="#">{t('app2')}</a>
               <a href="#">{t('app3')}</a>
             </div>
           </div>
-          <a href="/pricing" className={styles.link}>{t('pricing')}</a>
+          <Link href="/pricing" className={styles.link}>
+            {t('pricing')}
+          </Link>
           <div className={styles.dropdown}>
-            <a href="#" className={styles.link}>{t('community')}
-              <img src="/icons/downArrow.svg" alt="down arrow" />
-            </a>
+            <Link href="#" className={styles.link}>
+              {t('community')}
+              <Image src="/icons/downArrow.svg" alt="down arrow" width={16} height={16} />
+            </Link>
             <div className={styles.dropdownContent}>
               <a href="#">{t('community1')}</a>
               <a href="#">{t('community2')}</a>
               <a href="#">{t('community3')}</a>
             </div>
           </div>
-          <a href="#" className={styles.link}>{t('support')}</a>
+          <Link href="#" className={styles.link}>
+            {t('support')}
+          </Link>
         </div>
         <div className={styles.rightSection}>
-          <TransparentButton title={t('startNow')} redirectTo='/signup'/>
-          <Button title={t('contactSales')} showArrow={true} />          
+          <TransparentButton title={t('startNow')} redirectTo="/signup" />
+          <Button title={t('contactSales')} showArrow={true} />
         </div>
-        <img src={menuOpen ? "/icons/close.svg" : "/icons/menu.svg"} alt="Menu" className={styles.menuIcon} onClick={toggleMenu} />
+        <Image
+          src={menuOpen ? "/icons/close.svg" : "/icons/menu.svg"}
+          alt="Menu"
+          className={styles.menuIcon}
+          width={24}
+          height={24}
+          onClick={toggleMenu}
+        />
       </div>
       {menuOpen && (
         <div className={styles.mobileMenu} ref={menuRef}>
           <a href="#" className={styles.mobileLink} onClick={() => setAppsDropdownOpen(!appsDropdownOpen)}>
-            {t('apps')} <img src="/icons/downArrow.svg" alt="down arrow" />
+            {t('apps')} <Image src="/icons/downArrow.svg" alt="down arrow" width={16} height={16} />
           </a>
           {appsDropdownOpen && (
             <div className={styles.dropdownContentMobile}>
-              <a href="/salespar">{t('Salespar')}</a>
+              <Link href="/salespar">
+                {t('Salespar')}
+              </Link>
               <a href="#">{t('app2')}</a>
               <a href="#">{t('app3')}</a>
             </div>
           )}
-          <a href="#" className={styles.mobileLink}>{t('pricing')}</a>
+          <Link href="/pricing" className={styles.mobileLink}>
+            {t('pricing')}
+          </Link>
           <a href="#" className={styles.mobileLink} onClick={() => setCommunityDropdownOpen(!communityDropdownOpen)}>
-            {t('community')} <img src="/icons/downArrow.svg" alt="down arrow" />
+            {t('community')} <Image src="/icons/downArrow.svg" alt="down arrow" width={16} height={16} />
           </a>
           {communityDropdownOpen && (
             <div className={styles.dropdownContentMobile}>
@@ -130,13 +159,15 @@ const Header: React.FC = () => {
               <a href="#">{t('community3')}</a>
             </div>
           )}
-          <a href="#" className={styles.mobileLink}>{t('support')}</a>
+          <Link href="#" className={styles.mobileLink}>
+            {t('support')}
+          </Link>
           <Button title={t('adminConsole')} showArrow={false} onClick={handleContinue} />
-          <TransparentButton title={t('startNow')} redirectTo='/signup' />
+          <TransparentButton title={t('startNow')} redirectTo="/signup" />
           <Button title={t('contactSales')} showArrow={true} />
           <div className={styles.languageSwitcher}>
             <div onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)} className={styles.languageButton}>
-              <img src="/icons/globe.svg" alt="globe" />
+              <Image src="/icons/globe.svg" alt="globe" width={16} height={16} />
               <span>{i18n.language === 'pt' ? t('portuguese') : t('english')}</span>
             </div>
             {languageDropdownOpen && (

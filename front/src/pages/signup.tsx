@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/Signup.module.css';
 import CustomInput from '../components/CustomInput/CustomInput';
 import Button from '../components/Button/Button';
@@ -38,7 +40,9 @@ const Signup = () => {
       </Head>
       <main className={styles.main}>
         <div className={styles.leftSection}>
-          <a href="/"><img src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} /></a>
+          <Link href="/">
+            <Image src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} width={100} height={50} />
+          </Link>
           <h1 className={styles.title}>Comece da forma certa com seu plano gratuito</h1>
           <p className={styles.text}>Não é preciso informar dados do cartão de crédito.</p>
           <footer className={styles.footer}>
@@ -112,15 +116,15 @@ const Signup = () => {
                 </div>
                 <div className={styles.socialButtons}>
                   <button className={styles.socialButton}>
-                    <img src="/images/google.svg" alt="Google" className={styles.socialIcon} />
+                    <Image src="/images/google.svg" alt="Google" className={styles.socialIcon} width={24} height={24} />
                     Inscrever-se com Google
                   </button>
                   <button className={styles.socialButton}>
-                    <img src="/images/microsoft.svg" alt="Microsoft" className={styles.socialIcon} />
+                    <Image src="/images/microsoft.svg" alt="Microsoft" className={styles.socialIcon} width={24} height={24} />
                     Inscrever-se com Microsoft
                   </button>
                   <button className={styles.socialButton}>
-                    <img src="/images/github.svg" alt="GitHub" className={styles.socialIcon} />
+                    <Image src="/images/github.svg" alt="GitHub" className={styles.socialIcon} width={24} height={24} />
                     Inscrever-se com GitHub
                   </button>
                 </div>
@@ -128,7 +132,7 @@ const Signup = () => {
             )}
           </div>
           <div className={styles.heroSection}>
-            <img src="/images/symbol.svg" alt="Symbol" className={styles.symbolImage} />
+            <Image src="/images/symbol.svg" alt="Symbol" className={styles.symbolImage} width={200} height={200} />
           </div>
         </div>
         <div className={styles.DownSection}>

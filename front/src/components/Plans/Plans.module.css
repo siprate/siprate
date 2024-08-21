@@ -1,0 +1,287 @@
+/* Pricing Section */
+.pricingSection {
+    max-width: 1590px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .pricingCard {
+    background: #0C1DB5;
+    border-radius: 30px;
+    padding: 30px;
+    flex: 1;
+    margin-bottom: 40px;
+  }
+  
+  .cardTitle {
+    font-size: 40px;
+    font-family: 'Inder', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: -5px;
+  }
+  
+  .cardText {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: -20px;
+  }
+  
+  .cardPrice {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Inder', sans-serif;
+  }
+  
+  .currency {
+    font-size: 45px;
+    margin-right: 5px;
+  }
+  
+  .amount {
+    font-size: 80px;
+    margin-right: -5px;
+    font-weight: 900;
+  }
+  
+  .period {
+    font-size: 30px;
+  }
+  
+  .featuresBox {
+    background-color: #0041E7;
+    border-radius: 10px;
+    padding: 20px 0px 20px 20px;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .featuresTitle {
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Inder', sans-serif;
+  }
+  
+  .featuresList {
+    padding: 0 20px 0;
+    margin: 0;
+  }
+  
+  .featuresList li {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .resourceList {
+    margin-top: 20px;
+  }
+  
+  .resourceItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .resourceItem img {
+    margin-right: 10px;
+  }
+  
+  .resourceItem span {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
+  .plansBox {
+    border-radius: 10px;
+    margin-top: 25px;
+    color: white;
+  }
+  
+  .plansTitle {
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Inder', sans-serif;
+  }
+  
+  .plansList {
+    padding: 0 20px 0;
+    margin: 0;
+  }
+  
+  .plansList li {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .supportBox {
+    background-color: #0041E7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Inder', sans-serif;
+    text-align: center;
+  }
+  
+  
+  /* Pricing Section 2*/
+  .pricingCard2 {
+    background: #000743;
+    border-radius: 30px;
+    padding: 30px;
+    flex: 1;
+    margin-bottom: 40px;
+    border: 2px solid white;
+  
+  }
+  
+  .featuresBox2 {
+    background-color: #000426;
+    border-radius: 10px;
+    padding: 20px 0px 20px 20px;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+  }
+  
+  .mostChosen {
+    background: linear-gradient(90deg, #FF0000, #FF5C00, #FFC700, #2ECF06, #0041E7);
+    background-size: 500% 500%;
+    animation: gradientAnimation 15s linear infinite;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inder', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 25px;
+    margin-top: -15px;
+  }
+  
+  
+  /* Nova Seção */
+.newSection {
+  background-color: #04093A;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  gap: 20px;
+  box-sizing: border-box;
+  color: white;
+  max-width: 1590px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Permite que os elementos fiquem em linha ao invés de coluna */
+}
+
+.sectionOne, .sectionTwo, .sectionThree {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px; /* Define um tamanho mínimo para as seções no mobile */
+}
+
+.sectionOne .cardHeader {
+  margin-bottom: -20px;
+}
+
+.priceButtonContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: -20px;
+}
+
+.priceButtonContainer .cardPrice {
+  margin-right: 50px;
+}
+
+.sectionTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.sectionThree {  
+  text-align: center;  
+}
+
+.cardText2 {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 75px;
+}
+
+.idealBox {
+  background-color: #000426;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 20px;
+  color: white;
+  font-size: 35px;
+  font-family: 'Inder', sans-serif;
+  text-align: center;
+}
+
+  @media (max-width: 768px) {
+    .pricingSection {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;      
+      gap: 10px;      
+    }
+  
+    .pricingCard {
+      min-width: 90%; 
+      margin-right: 10px; 
+      scroll-snap-align: start; 
+    }
+
+    .newSection {
+      flex-direction: column; 
+      padding: 20px; 
+  }
+
+  .sectionOne, .sectionTwo, .sectionThree {
+      flex: unset; /* Remove o comportamento flexível para evitar esticamento excessivo */
+      min-width: unset; /* Remove o tamanho mínimo fixo */
+      width: 100%; /* Garante que cada seção ocupe 100% da largura no mobile */
+      margin-bottom: 20px; /* Adiciona espaçamento entre as seções no mobile */
+  }
+
+  .priceButtonContainer {
+      flex-direction: column; /* Alinha os elementos em coluna */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+      gap: 10px; /* Adiciona espaçamento entre o preço e o botão */
+  }
+
+  .cardText2 {
+      margin-right: 0; /* Remove a margem extra no mobile */
+  }
+
+  .idealBox {
+      padding: 20px; /* Reduz o padding no mobile */
+      font-size: 24px; /* Reduz o tamanho da fonte no mobile */
+  }
+  }

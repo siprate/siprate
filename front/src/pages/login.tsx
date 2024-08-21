@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/Login.module.css';
 import CustomInput from '../components/CustomInput/CustomInput';
 import Button from '../components/Button/Button';
@@ -34,7 +36,9 @@ const Login = () => {
       </Head>
       <main className={styles.main}>
         <div className={styles.rightSection}>
-          <a href="/"><img src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} /></a>
+          <Link href="/">
+            <Image src="/siprate.svg" alt="SIPRATE Logo" className={styles.logo} width={100} height={50} />
+          </Link>
           <div className={styles.glassEffect}>
             {!showAdditionalFields && (
               <>
@@ -75,15 +79,15 @@ const Login = () => {
                 </div>
                 <div className={styles.socialButtons}>
                   <button className={styles.socialButton}>
-                    <img src="/images/google.svg" alt="Google" className={styles.socialIcon} />
+                    <Image src="/images/google.svg" alt="Google" className={styles.socialIcon} width={24} height={24} />
                     Continuar com Google
                   </button>
                   <button className={styles.socialButton}>
-                    <img src="/images/microsoft.svg" alt="Microsoft" className={styles.socialIcon} />
+                    <Image src="/images/microsoft.svg" alt="Microsoft" className={styles.socialIcon} width={24} height={24} />
                     Continuar com Microsoft
                   </button>
                   <button className={styles.socialButton}>
-                    <img src="/images/github.svg" alt="GitHub" className={styles.socialIcon} />
+                    <Image src="/images/github.svg" alt="GitHub" className={styles.socialIcon} width={24} height={24} />
                     Continuar com GitHub
                   </button>
                 </div>
@@ -91,7 +95,7 @@ const Login = () => {
             )}
           </div>          
           <div className={styles.heroSection}>
-            <img src="/images/symbol.svg" alt="Symbol" className={styles.symbolImage} />
+            <Image src="/images/symbol.svg" alt="Symbol" className={styles.symbolImage} width={200} height={200} />
           </div>
         </div>
       </main>

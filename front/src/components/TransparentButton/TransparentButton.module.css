@@ -1,14 +1,16 @@
 .button {
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    height: 44px;
-    padding: 10px;
-    border: 3px solid #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 9px;
-  }
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  height: 44px;
+  padding: 10px;
+  border: 3px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 9px;
+  width: 100%; /* Isso faz o botão ocupar 100% da largura do pai */
+  box-sizing: border-box; /* Garante que o padding e o border não ultrapassem a largura */
+}
